@@ -28,4 +28,147 @@
     .brand img{height:56px;width:auto;border-radius:6px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
     .brand h1{font-size:20px;margin:0;letter-spacing:1px}
     nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--white)}
+
+    .contact{display:flex;flex-direction:column;align-items:flex-end;font-size:13px;color:var(--muted)}
+    .contact a{color:var(--muted);text-decoration:none}
+
+    /* Hero */
+    .hero{position:relative;border-radius:12px;overflow:hidden;margin:18px 0}
+    .hero .bg{background-image:url('/mnt/data/486373740_28922146844099541_457136731998335917_n.jpg');background-size:cover;background-position:center;height:420px;filter:grayscale(10%)}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.55),rgba(0,0,0,0.65));}
+    .hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:40px;gap:10px}
+    .hero h2{margin:0;font-size:36px;line-height:1.05;color:var(--white);text-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    .hero p{color:var(--muted);max-width:680px}
+    .cta{display:inline-block;margin-top:10px;padding:12px 18px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#ff9b4a);color:#0b0b0b;text-decoration:none;font-weight:700}
+
+    /* Product grid */
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);min-height:160px;display:flex;flex-direction:column}
+    .card img{height:120px;width:100%;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0 6px 0;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .card .btn{margin-top:auto;background:var(--glass);padding:8px 12px;border-radius:8px;text-align:center;color:var(--white);text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,0.03)}
+
+    /* About & Contact */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0}
+    .panel{background:var(--panel);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    form label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);resize:vertical}
+    form button{margin-top:10px;padding:10px 14px;border-radius:8px;border:none;background:var(--accent);font-weight:700}
+
+    footer{margin-top:30px;padding:18px 0;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .products{grid-template-columns:repeat(2,1fr)}
+      .split{grid-template-columns:1fr}
+      .brand img{height:44px}
+      .hero h2{font-size:28px}
+    }
+    @media(max-width:560px){
+      nav ul{display:none}
+      .contact{display:none}
+      .brand h1{font-size:18px}
+      .hero .bg{height:300px}
+      .products{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container top">
+      <div class="brand">
+        <img src="/mnt/data/486373740_28922146844099541_457136731998335917_n.jpg" alt="FixLine logo">
+        <div>
+          <h1>FixLine</h1>
+          <div style="font-size:12px;color:var(--muted)">მაღალი ხარისხის სამშენებლო მასალები</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">მთავარი</a></li>
+          <li><a href="#products">პროდუქცია</a></li>
+          <li><a href="#about">ჩვენს შესახებ</a></li>
+          <li><a href="#partners">პარტნიორები</a></li>
+          <li><a href="#contact">კონტაქტი</a></li>
+        </ul>
+      </nav>
+
+      <div class="contact">
+        <div>📧 <a href="mailto:7leko7leko7@gmail.com">7leko7leko7@gmail.com</a></div>
+        <div>📞 <a href="tel:+995591104066">+995 591 10 4066</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <div class="bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h2>მაღალი ხარისხის სამშენებლო მასალები პროფესიონალებისთვის</h2>
+        <p>FixLine — საიმედოობა, გამოცდილი პერსონალი და სწრაფი მიწოდება. დაათვალიერე ჩვენი პროდუქცია და შეარჩიე საჭირო მასალები.</p>
+        <a class="cta" href="#products">იხილე პროდუქცია</a>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2 style="margin:6px 0 12px 0">პროდუქცია</h2>
+      <div class="products">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1558980664-10b9b8d1b0d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="">
+          <h3>ხელის ხელსაწყოები</h3>
+          <p>მყარი და გამძლე ხელსაწყოები მშვიდი ფასებით.</p>
+          <a class="btn" href="#">დეტალურად</a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="">
+          <h3>ფიტინგები და კავშირები</h3>
+          <p>მაღალი ხარისხის ფიტინგები და მილები.</p>
+          <a class="btn" href="#">დეტალურად</a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1581093588401-7f8b0c6e2d6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="">
+          <h3>ელექტრო მასალები</h3>
+          <p>საკაბელები, ზედაპირები და ნაკეთობები.</p>
+          <a class="btn" href="#">დეტალურად</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="split" id="about">
+      <div class="panel">
+        <h3>ჩვენს შესახებ</h3>
+        <p style="color:var(--muted)">FixLine — კომპანია, რომელიც ეძღვნება მაღალი ხარისხის სამშენებლო მასალების მიწოდებას. წლების განმავლობაში ვმუშაობთ მუშა გუნდებთან და ვაძლევთ გარანტიას შესაბამისობაზე.</p>
+        <ul style="color:var(--muted)">
+          <li>სანდოობა და ხარისხი</li>
+          <li>მსხვილი მარაგი და სწრაფი მიწოდება</li>
+          <li>პროფესიონალური კონსულტაცია</li>
+        </ul>
+      </div>
+
+      <div class="panel" id="contact">
+        <h3>დაგვიკავშირდით</h3>
+        <form>
+          <label>სახელი</label>
+          <input type="text" placeholder="შენი სახელი">
+          <label>ელ.ფოსტა</label>
+          <input type="email" placeholder="e-mail">
+          <label>შეტყობინება</label>
+          <textarea rows="4" placeholder="რას გვეუბნები..."></textarea>
+          <button type="button">გაგზავნა</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2025 FixLine — ყველა უფლება დაცულია • 7leko7leko7@gmail.com • +995 591 10 4066</div>
+    </footer>
+  </main>
+
+</body>
+</html>
