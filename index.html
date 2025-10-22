@@ -2,10 +2,130 @@
 <html lang="ka">
 <head>
   <meta charset="UTF-8">
-  <title>Fixline.ge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixline - სარემონტო და საყოფაცხოვრებო მასალები</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    header {
+      background-color: #1f1f1f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      color: #ff9900;
+      font-size: 28px;
+      margin: 0;
+    }
+    nav a {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #ff9900;
+      transition: 0.3s;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(to right, #1f1f1f, #2a2a2a);
+    }
+    .hero h2 {
+      font-size: 40px;
+      color: #ff9900;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #ddd;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 50px;
+    }
+    .product {
+      background: #1e1e1e;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255,153,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 30px 10px;
+      color: #999;
+    }
+    footer a {
+      color: #ff9900;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>გამარჯობა!</h1>
-  <p>ეს საიტი მალე ამუშავდება 🚀</p>
+  <header>
+    <h1>Fixline</h1>
+    <nav>
+      <a href="#">მთავარი</a>
+      <a href="#">პროდუქცია</a>
+      <a href="#">ჩვენ შესახებ</a>
+      <a href="#">კონტაქტი</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>ყველაფერი სარემონტო და სახლისთვის</h2>
+    <p>Fixline გთავაზობთ ხარისხიან სარემონტო და საყოფაცხოვრებო მასალებს საუკეთესო ფასად!</p>
+  </section>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1591824438708-9f9e2c6d7b1f" alt="საღებავები">
+      <h3>საღებავები და ლაქები</h3>
+      <p>მაღალი ხარისხის შიდა და გარე საღებავები ყველა ტიპის ზედაპირისთვის.</p>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1581093448798-5cbe47b2c7b4" alt="ხელსაწყოები">
+      <h3>ხელსაწყოები</h3>
+      <p>პროფესიონალური ინსტრუმენტები და აქსესუარები სამუშაოს გასამარტივებლად.</p>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1560184897-91bc3d77ba1c" alt="სანტექნიკა">
+      <h3>სანტექნიკა</h3>
+      <p>სანდო და გამძლე სანტექნიკური პროდუქცია თქვენი კომფორტისთვის.</p>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1603575448360-9f3b9b2dbf18" alt="იზოლაცია">
+      <h3>იზოლაციის მასალები</h3>
+      <p>თბო-, ხმის- და ტენიანობის იზოლაციის ინოვაციური გადაწყვეტილებები.</p>
+    </div>
+  </section>
+
+  <footer>
+    📧 <a href="mailto:7leko7leko7@gmail.com">7leko7leko7@gmail.com</a> |
+    ☎️ +995 591 10 4066  
+    <p>© 2025 Fixline. ყველა უფლება დაცულია.</p>
+  </footer>
 </body>
 </html>
